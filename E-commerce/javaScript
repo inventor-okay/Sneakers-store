@@ -1,0 +1,44 @@
+// Function to navigate between pages
+function goToPage(page) {
+    const homepage = document.querySelector('.homepage-content');
+    const productPage = document.querySelector('.products-section');
+
+    if (page === 'home') {
+        homepage.style.display = 'block';
+        productPage.style.display = 'none';
+    } else if (page === 'products') {
+        homepage.style.display = 'none';
+        productPage.style.display = 'block';
+    }
+}
+
+// Function to add a product to the cart (simplified, you would typically have a cart object)
+function addToCart(productName) {
+    alert('Added ' + productName + ' to the cart.');
+}
+
+// Add event listeners for navigation links
+document.getElementById('home-link').addEventListener('click', () => goToPage('home'));
+document.getElementById('product-link').addEventListener('click', () => goToPage('products'));
+document.getElementById('cart-link').addEventListener('click', () => alert('View Cart (Placeholder)'));
+
+<!-- Add this inside the HTML file, preferably just before the closing </body> tag -->
+<script>
+    const stars = document.querySelectorAll('.star');
+
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            // Simulate storing the rating in a variable or database
+            const rating = index + 1;
+            alert(`You rated this product ${rating} stars.`);
+        });
+    });
+</script>
+
+
+
+
+
+
+ 
+   
